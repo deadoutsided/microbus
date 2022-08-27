@@ -1,0 +1,52 @@
+.header{
+  display: flex;
+  border: solid $color;
+  border-width: 0 0 1px;
+  background-color: $bg-color;
+  width: 100%;
+
+  &__list{
+    display: flex;
+    list-style-type: none;
+    margin: 0 0 0 50px;
+    padding: 0;
+    align-items: center;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $color;
+  }
+
+  &__item{
+    margin: 0 20px 0 0;
+  }
+
+  &__title{
+    margin: 16px 0 16px 0;
+    flex-grow: 2;
+    position: relative;
+    left: -132px;
+  }
+
+  &__menu-btn{
+    display: flex;
+    flex-direction: column;
+    background-color: inherit;
+    border: none;
+    justify-content: center;
+    margin: 25px 45px 25px 25px;
+    padding: 0;
+    display: none;
+  }
+
+  &__line{
+    margin: 0 0 7px;
+  }
+
+  &__line:last-child{
+    margin: 0;
+  }
+}

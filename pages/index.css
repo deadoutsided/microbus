@@ -1,0 +1,48 @@
+@import '../vendor/fonts.css';
+@import '../vendor/normalize.css';
+.header {
+  display: flex;
+  border: solid #E1FD2C;
+  border-width: 0 0 1px;
+  background-color: #191D2C;
+  width: 100%;
+}
+.header__list {
+  display: flex;
+  list-style-type: none;
+  margin: 0 0 0 50px;
+  padding: 0;
+  align-items: center;
+  font-family: "Sourse Sans Pro", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #E1FD2C;
+}
+.header__item {
+  margin: 0 20px 0 0;
+}
+.header__title {
+  margin: 16px 0 16px 0;
+  flex-grow: 2;
+  position: relative;
+  left: -132px;
+}
+.header__menu-btn {
+  display: flex;
+  flex-direction: column;
+  background-color: inherit;
+  border: none;
+  justify-content: center;
+  margin: 25px 45px 25px 25px;
+  padding: 0;
+  display: none;
+}
+.header__line {
+  margin: 0 0 7px;
+}
+.header__line:last-child {
+  margin: 0;
+}/*# sourceMappingURL=index.css.map */
