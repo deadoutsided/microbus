@@ -1,0 +1,53 @@
+.characteristics{
+  display: flex;
+  flex-wrap: wrap;
+
+  &__column{
+    padding: 41px 50px 45px;
+    max-width: 50%;
+    border: solid $color;
+    border-width: 0 1px 0 0;
+    box-sizing: border-box;
+
+    &_small{
+      min-width: 25%;
+      //max-width: 25%;
+    }
+  }
+
+  &__paragraph{
+    @include text($family: $font-family, $weight: 300, $height: 42px, $size: 30px);
+    color: $color;
+  }
+
+  &__highlight{
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 42px;
+    color: $color;
+  }
+
+  &__title{
+    @include text($family: $font-family, $weight: 400, $height: 37px, $size: 30px);
+    color: $color;
+  }
+
+  &__list{
+
+    &_plus{
+      list-style-type: '+';
+    }
+
+    &_minus{
+      list-style-type: '-';
+      border-radius: 0;
+    }
+  }
+
+  &__item{
+    @include text($family: $font-family, $weight: 300, $size: 22px, $height: 32px);
+    color: $color;
+    padding: 0 0 0 5px;
+    margin: 0;
+  }
+}

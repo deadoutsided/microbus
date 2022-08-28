@@ -11,10 +11,7 @@
     margin: 0 0 0 50px;
     padding: 0;
     align-items: center;
-    font-family: $font-family;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 16px;
+    @include text($family: $font-family, $weight: 400, $size: 12px, $height: 16px);
     letter-spacing: 1px;
     text-transform: uppercase;
     color: $color;
