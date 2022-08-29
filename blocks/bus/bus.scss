@@ -1,0 +1,67 @@
+.bus{
+  display: grid;
+  color: $color;
+  padding: 150px 0 150px 80px;
+  grid-template-rows: minmax(min-content,max-content) minmax(min-content, max-content) minmax(min-content,max-content) minmax(min-content,max-content); //88px - 141px 64px
+  grid-template-columns: minmax(560px, 1680px) 720px;
+  column-gap: 80px;
+  border: solid $color;
+  border-width: 0 0 1px;
+
+  &__paragraph{
+    color: inherit;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    grid-row: 1/2;
+    grid-column: 1/2;
+    padding: 30px 0;
+    margin: 0;
+  }
+
+  &__paragraph:nth-child(3){
+    grid-row: 3/4;
+    padding: 51px 0 62px 0;
+  }
+
+  &__title{
+    color: inherit;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 65px;
+    line-height: 73px;
+    text-align: center;
+    display: block;
+    grid-row: 2/3;
+    grid-column: 1/2;
+    margin: 0;
+  }
+
+  &__img{
+    grid-column: 2/3;
+    grid-row: 1/5;
+  }
+
+  &__button{
+    grid-column: 1/2;
+    grid-row: 4/5;
+    margin: 0;
+    padding: 0;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 60px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: inherit;
+    background-color: $bg-color;
+    border: 1px solid $color;
+    min-width: 340px;
+    justify-self: center;
+    max-height: 64px;
+  }
+}

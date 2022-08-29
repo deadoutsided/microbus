@@ -48,7 +48,40 @@
     </button>
   </header>
   <main class="main">
-
+    <section class="bus">
+      <p class="bus__paragraph">volkswagen T1</p>
+      <h1 class="bus__title">Новая версия популярного микроавтобуса</h1>
+      <p class="bus__paragraph">С ЭЛЕКТРО ДВИГАТЕЛЕМ</p>
+        <img class="bus__img" src="./images/bus.png" alt="Фото volkswagen T1"
+        srcset="./images/bus.png 720w,
+        ./images/bus_700.png 700w,
+        ./images/bus_280.pmg 280w"
+        sizes="(min-width: 768px) and (max-width: 1439px) 700px, (max-width: 767px) 280px, 720px">
+      <button class="bus__button">Подробнее</button>
+    </section>
+    <section class="characteristics">
+      <div class="characteristics__column">
+        <p class="characteristics__paragraph"><span class="characteristics__highlight">VW T1 Electro:</span> Отделение Volkswagen Commercial Vehicles представило концепт e-Bulli: классический вэн T1 1966 года
+          с электрической силовой установкой.
+          По словам производителя, проект получит коммерческое продолжение, и через фирму-партнера eClassics наборы для конверсии микроавтобусов в электрокары
+          и уже готовые машины будут продавать частным клиентам.</p>
+      </div>
+      <div class="characteristics__column characteristics__column_small">
+        <h2 class="characteristics__title">ПЛЮСЫ</h2>
+        <ul class="characteristics__list characteristics__list_plus">
+          <li class="characteristics__item">Экологичный</li>
+          <li class="characteristics__item">Экономный</li>
+          <li class="characteristics__item">Тихий</li>
+        </ul>
+      </div>
+      <div class="characteristics__column characteristics__column_small">
+        <h2 class="characteristics__title">МИНУСЫ</h2>
+        <ul class="characteristics__list characteristics__list_minus">
+          <li class="characteristics__item">Дорогой</li>
+          <li class="characteristics__item">Подзарядка</li>
+        </ul>
+      </div>
+    </section>
   </main>
 </body>
 </html>
