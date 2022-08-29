@@ -1,17 +1,22 @@
 .characteristics{
   display: flex;
   flex-wrap: wrap;
+  border: solid $color;
+  border-width: 0 0 1px 0;
 
   &__column{
     padding: 41px 50px 45px;
-    max-width: 50%;
+    max-width: calc(50% + 1px);
     border: solid $color;
     border-width: 0 1px 0 0;
     box-sizing: border-box;
 
     &_small{
-      min-width: 25%;
+      min-width: calc(25% - 1px);
       //max-width: 25%;
+      &:last-child{
+        border-width: 0;
+      }
     }
   }
 
@@ -33,14 +38,17 @@
   }
 
   &__list{
+    padding: 0;
 
     &_plus{
       list-style-type: '+';
+      padding: 0 0 0 11px;
     }
 
     &_minus{
       list-style-type: '-';
       border-radius: 0;
+      padding: 0 0 0 7px;
     }
   }
 

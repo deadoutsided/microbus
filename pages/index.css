@@ -120,16 +120,21 @@
 .characteristics {
   display: flex;
   flex-wrap: wrap;
+  border: solid #E1FD2C;
+  border-width: 0 0 1px 0;
 }
 .characteristics__column {
   padding: 41px 50px 45px;
-  max-width: 50%;
+  max-width: calc(50% + 1px);
   border: solid #E1FD2C;
   border-width: 0 1px 0 0;
   box-sizing: border-box;
 }
 .characteristics__column_small {
-  min-width: 25%;
+  min-width: calc(25% - 1px);
+}
+.characteristics__column_small:last-child {
+  border-width: 0;
 }
 .characteristics__paragraph {
   font-family: "Source Sans Pro", sans-serif;
@@ -153,12 +158,17 @@
   line-height: 37px;
   color: #E1FD2C;
 }
+.characteristics__list {
+  padding: 0;
+}
 .characteristics__list_plus {
   list-style-type: "+";
+  padding: 0 0 0 11px;
 }
 .characteristics__list_minus {
   list-style-type: "-";
   border-radius: 0;
+  padding: 0 0 0 7px;
 }
 .characteristics__item {
   font-family: "Source Sans Pro", sans-serif;
@@ -169,4 +179,38 @@
   color: #E1FD2C;
   padding: 0 0 0 5px;
   margin: 0;
+}
+
+.gallery {
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  border: solid #E1FD2C;
+  border-width: 0 1px 0 0;
+}
+.gallery__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 56px 50px;
+}
+.gallery__title {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  font-size: 46px;
+  font-style: normal;
+  line-height: 46px;
+  color: #E1FD2C;
+  max-width: 300px;
+  padding: 0;
+  margin: 0;
+}
+.gallery__slider {
+  border: none;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+}
+.gallery__slider:first-child {
+  padding: 0 30px 0 0;
 }/*# sourceMappingURL=index.css.map */
