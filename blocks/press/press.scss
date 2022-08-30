@@ -1,0 +1,71 @@
+.press{
+  display: flex;
+  width: 100%;
+
+  &__column{
+    width: calc(50% + 1px);
+    border: solid $color;
+    border-width: 1px 0 0;
+    color: $color;
+    min-height: 500px;
+    padding: 50px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &:first-child{
+      border: solid $color;
+      border-width: 1px 1px 0 0;
+    }
+  }
+
+  &__title{
+    @include text($weight: 400, $family: $font-family, $height: 46px, $size: 46px);
+    color: inherit;
+  }
+
+  &__paragraph{
+    @include text($family: $font-family, $weight: 300, $height: 43px, $size: 30px);
+  }
+
+  &__highlight{
+    @include text($family: $font-family, $height: 42px, $weight: 400, $size: 30px);
+    color: inherit;
+  }
+
+  &__cont{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__link{
+    @include text($family: $font-family, $weight: 400, $height: 28px, $size: 19px);
+    color: $color;
+    border: 1px solid $color;
+    border-radius: 100%;
+    padding: 12px 26px;
+
+    &:hover{
+      background-color: $color;
+      color: $bg-color;
+      cursor: pointer;
+    }
+  }
+
+  &__label{
+    margin: 0 8px 0 0;
+  }
+
+  &__radio{
+    appearance: none;
+    margin: 0;
+    &:checked {
+      +.press__label {
+        >.press__circle{
+          background-image: url(../../images/press__circle.png);
+        }
+      }
+    }
+  }
+  }
