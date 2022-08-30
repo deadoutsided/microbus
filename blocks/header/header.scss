@@ -4,6 +4,12 @@
   border-width: 0 0 1px;
   background-color: $bg-color;
   width: 100%;
+  max-width: 1440px;
+
+  @media screen and (min-width: 1442px) {
+    border: solid $color;
+    border-width: 0 1px 1px;
+  }
 
   &__list{
     display: flex;

@@ -3,7 +3,7 @@
   color: $color;
   padding: 150px 0 150px 80px;
   grid-template-rows: minmax(min-content,max-content) minmax(min-content, max-content) minmax(min-content,max-content) minmax(min-content,max-content); //88px - 141px 64px
-  grid-template-columns: minmax(560px, 1680px) 720px;
+  grid-template-columns: minmax(560px, 1680px) minmax(700px,720px);
   column-gap: 80px;
   border: solid $color;
   border-width: 0 0 1px;
