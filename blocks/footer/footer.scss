@@ -1,0 +1,42 @@
+.footer{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1440px;
+  min-height: 316px;
+
+  &__column{
+    width: calc(50% + 1px);
+    color: $color;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    border: solid $color;
+    border-width: 1px 1px 0 0;
+
+    &:last-child{
+      border-width: 1px 0 0 0;
+      justify-content: space-between;
+    }
+  }
+
+  &__title{
+    @include text($family: $font-family, $weight: 400, $height: 46px, $size: 46px);
+    color: inherit;
+    margin: 0;
+  }
+
+  &__paragraph{
+    @include text($family: $font-family, $weight: 400, $height: 28px, $size: 19px);
+    color: inherit;
+    margin: 16px 0 0;
+  }
+
+  &__logo{
+    margin: 0 0 0 auto;
+  }
+
+  &__copyright{
+    margin: 0 0 0 auto;
+  }
+}
