@@ -22,10 +22,12 @@
   &__title{
     @include text($weight: 400, $family: $font-family, $height: 46px, $size: 46px);
     color: inherit;
+    margin: 0;
   }
 
   &__paragraph{
     @include text($family: $font-family, $weight: 300, $height: 43px, $size: 30px);
+    margin: 0;
   }
 
   &__highlight{
@@ -45,6 +47,7 @@
     border: 1px solid $color;
     border-radius: 100%;
     padding: 12px 26px;
+    text-decoration: none;
 
     &:hover{
       background-color: $color;

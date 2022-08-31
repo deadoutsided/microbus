@@ -1,5 +1,7 @@
 const gallSlider = document.querySelectorAll('.gallery__slider');
 const gallImg = document.querySelector('.gallery__img');
+const form = document.querySelector('.form');
+const formBtn = form.querySelector('.form__subm-btn');
 const gallUrls = [
   {
     src:'./images/gallery__img_bus.jpg',
@@ -36,3 +38,10 @@ gallSlider[1].addEventListener('click', () => {
   }
   gallSlide(gallCount);
 });
+
+function formSubmitHandler(evt){
+  evt.preventDefault();
+  formBtn.textContent = 'Готово!';
+}
+
+form.addEventListener('submit', formSubmitHandler);
