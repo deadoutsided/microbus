@@ -18,6 +18,18 @@
     margin: 0;
   }
 
+  &__img{
+    object-fit: cover;
+
+    @media screen and (max-width:1399px) {
+      &{
+        width: 700px;
+        height: 510px;
+      }
+    }
+
+  }
+
   &__slider{
     border: none;
     padding: 0;
