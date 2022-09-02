@@ -24,14 +24,14 @@
     &:nth-child(3){
       grid-row: 3/4;
       padding: 51px 0 62px 0;
-      @media screen and (max-width: 1339px) {
+      @media screen and (max-width: 1340px) {
         &{
           padding: 51px 0 100px;
         }
       }
     }
 
-    @media screen and (max-width: 1339px) {
+    @media screen and (max-width: 1340px) {
       &{
         padding: 0 0 30px 0;
       }
@@ -56,7 +56,7 @@
     grid-row: 1/5;
     justify-self: end;
 
-    @media screen and (max-width: 1339px) {
+    @media screen and (max-width: 1340px) {
       &{
         grid-column: 1/2;
         grid-row: 5/6;
@@ -92,7 +92,7 @@
       background-color: $color;
     }
 
-    @media screen and (max-width: 1339px) {
+    @media screen and (max-width: 1340px) {
       &{
         grid-column: 1/2;
         grid-row: 6/7;
@@ -100,7 +100,7 @@
     }
   }
 
-  @media screen and (max-width: 1339px) {
+  @media screen and (max-width: 1340px) {
     &{
       display: grid;
       color: $color;
