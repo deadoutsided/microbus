@@ -13,9 +13,30 @@
 
     &_small{
       min-width: calc(25% - 1px);
-      //max-width: 25%;
+
       &:last-child{
         border-width: 0;
+
+        @media screen and (max-width: 1100px) {
+          &{
+            border-width: 0 0 1px 1px;
+          }
+        }
+
+      }
+
+      @media screen and (max-width: 1100px) {
+        &{
+          width: 50%;
+          min-height: 505px;
+        }
+      }
+    }
+
+    @media screen and (max-width:1100px) {
+      &{
+        max-width: 100%;
+        border-width: 0 0 1px;
       }
     }
   }
@@ -53,7 +74,7 @@
   }
 
   &__item{
-    @include text($family: $font-family, $weight: 300, $size: 22px, $height: 32px);
+    @include text($family: $font-family, $weight: 300, $size: 21px, $height: 32px);
     color: $color;
     padding: 0 0 0 5px;
     margin: 0;

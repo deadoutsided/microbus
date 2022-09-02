@@ -200,6 +200,23 @@
 .characteristics__column_small:last-child {
   border-width: 0;
 }
+@media screen and (max-width: 1100px) {
+  .characteristics__column_small:last-child {
+    border-width: 0 0 1px 1px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .characteristics__column_small {
+    width: 50%;
+    min-height: 505px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .characteristics__column {
+    max-width: 100%;
+    border-width: 0 0 1px;
+  }
+}
 .characteristics__paragraph {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 300;
@@ -237,7 +254,7 @@
 .characteristics__item {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 300;
-  font-size: 22px;
+  font-size: 21px;
   font-style: normal;
   line-height: 32px;
   color: #E1FD2C;
