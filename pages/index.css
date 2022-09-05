@@ -341,6 +341,16 @@
   border: solid #E1FD2C;
   border-width: 1px 1px 0 0;
 }
+@media screen and (max-width: 1100px) {
+  .press__column:first-child {
+    display: none;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .press__column {
+    width: 100%;
+  }
+}
 .press__title {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 400;
