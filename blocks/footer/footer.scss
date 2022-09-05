@@ -13,10 +13,31 @@
     padding: 50px;
     border: solid $color;
     border-width: 1px 1px 0 0;
+    box-sizing: border-box;
 
     &:last-child{
       border-width: 1px 0 0 0;
       justify-content: space-between;
+
+      @media screen and (max-width: 1100px) {
+        &{
+          padding: 50px 50px 50px 0;
+          max-width: 234px;
+          border-width: 0;
+        }
+      }
+    }
+
+    @media screen and (max-width: 1100px) {
+      &{
+        border-width: 0;
+      }
+    }
+
+    @media screen and (max-width: 880px) {
+      &{
+        width: fit-content;
+      }
     }
   }
 
@@ -38,5 +59,13 @@
 
   &__copyright{
     margin: 0 0 0 auto;
+  }
+
+  @media screen and (max-width: 1100px) {
+    &{
+      justify-content: space-between;
+      border: solid $color;
+      border-width: 1px 0 0;
+    }
   }
 }
