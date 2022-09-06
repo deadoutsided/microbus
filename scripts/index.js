@@ -6,6 +6,23 @@ const radioBtns = document.querySelectorAll('.press__radio');
 const pressHL = document.querySelector('.press__highlight');
 const pressPar = document.querySelector('.press__paragraph');
 const pressLink = document.querySelector('.press__link');
+const headerMenu = document.querySelector('.header__menu-btn');
+const headerTitle = document.querySelector('.header__title');
+const headerList = document.querySelector('.header__list');
+
+const menuClasses = [
+  {
+    title: 'header__title',
+    list: 'header__list',
+    menu: 'header__menu-btn'
+  },
+  {
+    title: 'header__title header__title_opened',
+    list: 'header__list header__list_opened',
+    menu: 'header__menu-btn header__menu-btn_opened'
+  }
+]
+
 const gallUrls = [
   {
     src:'./images/gallery__img_bus.jpg',
@@ -35,6 +52,22 @@ const pressInf = [
 ]
 
 let gallCount = 0;
+
+function openMenu(){
+  if(!headerTitle.classList.contains('header__title_opened')){
+    headerTitle.setAttribute('class', menuClasses[1].title);
+    headerList.setAttribute('class', menuClasses[1].list);
+    headerMenu.setAttribute('class', menuClasses[1].menu);
+  } else {
+    headerTitle.removeAttribute('class');
+    headerTitle.setAttribute('class', menuClasses[0].title);
+    headerList.setAttribute('class', menuClasses[0].list);
+    headerMenu.setAttribute('class', menuClasses[0].menu);
+  }
+  console.log('soso');
+}
+
+headerMenu.addEventListener('click', () => {openMenu()});
 
 function gallSlide(num){
   gallImg.setAttribute('src', gallUrls[num].src);
