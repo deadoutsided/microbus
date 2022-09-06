@@ -12,16 +12,19 @@
     &_small{
       min-width: 25%;
 
-      &:last-child{
+      &:last-of-type{
+        border-width: 0 0 1px;
+
         @media screen and (max-width: 1100px) {
+          &{
+            border-width: 0px 0 1px 1px;
+          }
+        }
+
+        @media screen and (max-width: 480px) {
           &{
             border-width: 0 0 1px;
           }
-        }
-      }
-      @media screen and (max-width: 1100px) {
-        &:nth-child(2){
-          border-width: 0 1px 1px 0;
         }
       }
 
@@ -32,12 +35,29 @@
           min-height: 505px;
         }
       }
+
+      @media screen and (max-width:767px) {
+        padding: 20px 20px;
+      }
+
+      @media screen and (max-width: 480px) {
+        &{
+          width: 100%;
+          min-height: fit-content;
+        }
+      }
     }
 
     @media screen and (max-width:1100px) {
       &{
         max-width: 100%;
-        border-width: 0 0 1px;
+        border-width: 0px 0 1px;
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      &{
+        padding: 18px 20px;
       }
     }
   }
@@ -45,6 +65,13 @@
   &__paragraph{
     @include text($family: $font-family, $weight: 300, $height: 42px, $size: 30px);
     color: $color;
+    margin: 0;
+
+    @media screen and (max-width: 767px) {
+      &{
+        @include text($family: $font-family, $weight: 300, $size: 16px, $height: 27px);
+      }
+    }
   }
 
   &__highlight{
@@ -52,15 +79,31 @@
     font-size: 30px;
     line-height: 42px;
     color: $color;
+
+    @media screen and (max-width: 767px) {
+      &{
+        @include text($family: $font-family, $weight: 400, $size: 16px, $height: 27px);
+      }
+    }
   }
 
   &__title{
     @include text($family: $font-family, $weight: 400, $height: 37px, $size: 30px);
     color: $color;
+    letter-spacing: 2px;
+    margin: 0 0 50px;
+
+    @media screen and (max-width: 767px) {
+      &{
+        @include text($family: $font-family, $weight: 400, $size: 22px, $height: 22px);
+        margin: 0 0 40px;
+      }
+    }
   }
 
   &__list{
     padding: 0;
+    margin: 0;
 
     &_plus{
       list-style-type: '+';
@@ -79,6 +122,17 @@
     color: $color;
     padding: 0 0 0 5px;
     margin: 0;
+
+
+    @media screen and (max-width: 767px) {
+      &{
+        @include text($family: $font-family, $weight: 300, $size: 16px, $height: 20px);
+        margin: 0 0 6px;
+      }
+      &:last-child{
+        margin: 0;
+      }
+    }
   }
 
   @media screen and (max-width:1100px) {
