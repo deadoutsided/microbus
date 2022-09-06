@@ -190,6 +190,7 @@
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 400;
   font-size: 19px;
+  font-style: normal;
   line-height: 28px;
   text-align: center;
   text-transform: uppercase;
@@ -207,9 +208,24 @@
     padding: 51px 0 100px;
   }
 }
+@media screen and (max-width: 767px) {
+  .bus__paragraph:nth-child(3) {
+    padding: 30px 0 60px;
+  }
+}
 @media screen and (max-width: 1340px) {
   .bus__paragraph {
     padding: 0 0 30px 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .bus__paragraph {
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 400;
+    font-size: 11px;
+    font-style: normal;
+    line-height: 14px;
+    padding: 0 0 26px 0;
   }
 }
 .bus__title {
@@ -217,12 +233,22 @@
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 400;
   font-size: 65px;
+  font-style: normal;
   line-height: 73px;
   text-align: center;
   display: block;
   grid-row: 2/3;
   grid-column: 1/2;
   margin: 0;
+}
+@media screen and (max-width: 767px) {
+  .bus__title {
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 400;
+    font-size: 38px;
+    font-style: normal;
+    line-height: 50px;
+  }
 }
 .bus__img {
   grid-column: 2/3;
@@ -235,6 +261,11 @@
     grid-row: 5/6;
     justify-self: center;
     padding: 0 0 100px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .bus__img {
+    padding: 0 0 60px;
   }
 }
 .bus__button {
@@ -268,6 +299,13 @@
     grid-row: 6/7;
   }
 }
+@media screen and (max-width: 767px) {
+  .bus__button {
+    min-width: 280px;
+    max-width: 360px;
+    width: 100%;
+  }
+}
 @media screen and (max-width: 1340px) {
   .bus {
     display: grid;
@@ -280,6 +318,12 @@
     border-width: 0 0 1px;
     -moz-column-gap: 0;
          column-gap: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .bus {
+    padding: 60px 20px;
+    grid-template-columns: minmax(280px, 768px);
   }
 }
 
