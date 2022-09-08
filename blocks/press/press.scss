@@ -30,6 +30,13 @@
         width: 100%;
       }
     }
+
+    @media screen and (max-width: 767px) {
+      &{
+        padding: 20px 20px;
+        min-height: 287px;
+      }
+    }
   }
 
   &__title{
@@ -39,13 +46,25 @@
   }
 
   &__paragraph{
-    @include text($family: $font-family, $weight: 300, $height: 43px, $size: 30px);
+    @include text($family: $font-family, $weight: 300, $height: 42px, $size: 30px);
     margin: 0;
+
+    @media screen and (max-width: 767px) {
+      &{
+        @include text($family: $font-family, $size: 16px, $height: 27px, $weight: 300);
+      }
+    }
   }
 
   &__highlight{
     @include text($family: $font-family, $height: 42px, $weight: 400, $size: 30px);
     color: inherit;
+
+    @media screen and (max-width: 767px) {
+      &{
+        @include text($family: $font-family, $size: 16px, $height: 27px, $weight: 400);
+      }
+    }
   }
 
   &__cont{
@@ -66,6 +85,13 @@
       background-color: $color;
       color: $bg-color;
       cursor: pointer;
+    }
+
+    @media screen and (max-width: 767px) {
+      &{
+        @include text($family: $font-family, $weight: 400, $height: 28px, $size: 14px);
+        padding: 7px 22px;
+      }
     }
   }
 
