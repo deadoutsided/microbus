@@ -29,6 +29,12 @@
         border: solid $color;
         border-width: 0 0 1px 1px;
       }
+
+      @media screen and (max-width: 380px) {
+        &{
+          width: 200px;
+        }
+      }
     }
 
     &:focus{
@@ -52,6 +58,12 @@
     &::placeholder{
       @include text($family: $font-family, $weight: 400, $size: 9px, $height: 18px);
       color: $color;
+    }
+
+    @media screen and (max-width: 380px) {
+      &{
+        width: 140px;
+      }
     }
   }
 
