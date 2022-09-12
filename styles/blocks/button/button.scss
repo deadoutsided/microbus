@@ -7,6 +7,8 @@
   text-align: center;
   background-color: $bg-color;
   border: 1px solid $color;
+  transition: color 0.3s linear;
+  transition: background-color 0.3s linear;
 
   &:hover{
     color:$bg-color;
