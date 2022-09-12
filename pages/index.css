@@ -167,6 +167,12 @@
     left: calc(50% - 50px);
   }
 }
+@media screen and (max-width: 340px) {
+  .header__title {
+    position: absolute;
+    left: calc(50% - 50px);
+  }
+}
 .header__menu-btn {
   flex-direction: column;
   background-color: inherit;
@@ -202,6 +208,11 @@
   .header__menu-btn_opened {
     width: 20px;
     height: 20px;
+  }
+}
+@media screen and (max-width: 340px) {
+  .header__menu-btn {
+    margin: 25px 20px 25px auto;
   }
 }
 .header__line {
