@@ -30,7 +30,7 @@
       @media screen and (max-width: 674px) {
         max-width: 280px;
         padding: 0;
-        align-self: flex-start;
+        align-self: center;
       }
     }
 
@@ -54,25 +54,27 @@
   }
 
   &__title{
-    @include text($family: $font-family, $weight: 400, $height: 46px, $size: 46px);
+    @include regularText();
+    @include text($height: 46px, $size: 46px);
     color: inherit;
     margin: 0;
 
     @media screen and (max-width: 767px) {
       &{
-        @include text($family: $font-family, $weight: 400, $size: 26px, $height: 26px);
+        @include text($size: 26px, $height: 26px);
       }
     }
   }
 
   &__paragraph{
-    @include text($family: $font-family, $weight: 400, $height: 28px, $size: 19px);
+    @include regularText();
+    @include text($height: 28px, $size: 19px);
     color: inherit;
     margin: 16px 0 0;
 
     @media screen and (max-width: 767px) {
       &{
-        @include text($family: $font-family, $weight: 400, $size: 14px, $height: 14px);
+        @include text($size: 14px, $height: 14px);
       }
     }
 
@@ -94,7 +96,9 @@
 
   &__copyright{
     margin: 0 0 0 auto;
-    @include text($family: $font-family, $size: 12px, $height: 12px, $weight: 400);
+    @include regularText;
+    @include text($size: 13px, $height: 13px);
+    letter-spacing: 1px;
 
     @media screen and (max-width: 674px) {
       &{
