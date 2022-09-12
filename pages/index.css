@@ -19,6 +19,8 @@
   text-align: center;
   background-color: #191D2C;
   border: 1px solid #E1FD2C;
+  transition: color 0.3s linear;
+  transition: background-color 0.3s linear;
 }
 .button:hover {
   color: #191D2C;
@@ -139,6 +141,7 @@
 .header__link {
   text-decoration: none;
   color: inherit;
+  transition: opacity 0.3s linear;
 }
 .header__link:hover {
   opacity: 0.6;
@@ -568,6 +571,11 @@
 .gallery__arrow {
   width: 42px;
   height: 34px;
+  transition: opacity 0.3s linear;
+}
+.gallery__arrow:hover {
+  opacity: 0.6;
+  transition: opacity 0.3s linear;
 }
 @media screen and (max-width: 767px) {
   .gallery__arrow {

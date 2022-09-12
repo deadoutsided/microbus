@@ -67,6 +67,7 @@
   &__link{
     text-decoration: none;
     color: inherit;
+    transition: opacity 0.3s linear;
 
     &:hover{
       opacity: 0.6;
