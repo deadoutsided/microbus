@@ -1,0 +1,95 @@
+.press{
+  display: flex;
+  width: 100%;
+
+  &__column{
+    width: calc(50% + 1px);
+    border: solid $color;
+    border-width: 1px 0 0;
+    color: $color;
+    min-height: 500px;
+    padding: 50px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+
+    @media screen and (max-width: 1100px) {
+      &{
+        width: 100%;
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      &{
+        padding: 20px 20px;
+        min-height: 287px;
+      }
+    }
+  }
+
+  &__title{
+    @include regularText();
+    @include text($height: 46px, $size: 46px);
+    color: $color;
+    margin: 0;
+    width: calc(50% + 1px);
+    border: solid $color;
+    border-width: 1px 1px 0 0;
+    min-height: 500px;
+    padding: 50px 50px;
+    box-sizing: border-box;
+
+    @media screen and (max-width: 1100px) {
+      &{
+        display: none;
+      }
+    }
+  }
+
+  &__paragraph{
+    @include lightText();
+    @include text($height: 42px, $size: 30px);
+    margin: 0;
+
+    @media screen and (max-width: 767px) {
+      &{
+        @include text($size: 16px, $height: 27px);
+      }
+    }
+  }
+
+  &__highlight{
+    @include regularText();
+    @include text($height: 42px, $size: 30px);
+    color: inherit;
+
+    @media screen and (max-width: 767px) {
+      &{
+        @include text($size: 16px, $height: 27px);
+      }
+    }
+  }
+
+  &__cont{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__label{
+    margin: 0 8px 0 0;
+  }
+
+  &__radio{
+    appearance: none;
+    margin: 0;
+    &:checked {
+      +.press__label {
+        >.press__circle{
+          background-image: url(../../images/press__circle.png);
+        }
+      }
+    }
+  }
+  }

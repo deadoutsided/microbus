@@ -7,7 +7,8 @@
   color: $color;
 
   &__text-inp{
-    @include text($family: $font-family, $weight: 400, $size: 9px, $height: 18px);
+    @include regularText();
+    @include text($size: 9px, $height: 18px);
     color: inherit;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -20,17 +21,6 @@
     background-color: $bg-color;
     cursor: pointer;
 
-    &[type="email"]{
-      border: solid $color;
-      border-width: 0 0 1px 1px;
-      width: 260px;
-
-      &:focus{
-        border: solid $color;
-        border-width: 0 0 1px 1px;
-      }
-    }
-
     &:focus{
       border: solid $color;
       border-width: 1px 1px 1px 0;
@@ -38,6 +28,19 @@
 
       &::placeholder{
         color: transparent;
+      }
+    }
+
+    &_type{
+      &_email{
+        border: solid $color;
+        border-width: 0 0 1px 1px;
+        width: 260px;
+
+        &:focus{
+          border: solid $color;
+          border-width: 0 0 1px 1px;
+        }
       }
     }
 
@@ -50,14 +53,29 @@
     }
 
     &::placeholder{
-      @include text($family: $font-family, $weight: 400, $size: 9px, $height: 18px);
+      @include regularText();
+      @include text($size: 9px, $height: 18px);
       color: $color;
+    }
+
+    @media screen and (max-width: 380px) {
+      &{
+        width: 140px;
+      }
+
+      &_type_email{
+        width: 200px;
+      }
     }
   }
 
   &__subm-btn{
     background-color: $color;
     color: $bg-color;
+    @include regularText;
+    @include text($size:10px, $height: 13px);
+    letter-spacing: 1px;
+    text-transform: uppercase;
     border: 0;
     width: 80px;
     cursor: pointer;

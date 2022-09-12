@@ -26,6 +26,12 @@
           border-width: 0;
         }
       }
+
+      @media screen and (max-width: 674px) {
+        max-width: 280px;
+        padding: 0;
+        align-self: center;
+      }
     }
 
     @media screen and (max-width: 1100px) {
@@ -39,26 +45,66 @@
         width: fit-content;
       }
     }
+
+    @media screen and (max-width: 674px) {
+      &{
+        padding: 0;
+      }
+    }
   }
 
   &__title{
-    @include text($family: $font-family, $weight: 400, $height: 46px, $size: 46px);
+    @include regularText();
+    @include text($height: 46px, $size: 46px);
     color: inherit;
     margin: 0;
+
+    @media screen and (max-width: 767px) {
+      &{
+        @include text($size: 26px, $height: 26px);
+      }
+    }
   }
 
   &__paragraph{
-    @include text($family: $font-family, $weight: 400, $height: 28px, $size: 19px);
+    @include regularText();
+    @include text($height: 28px, $size: 19px);
     color: inherit;
     margin: 16px 0 0;
+
+    @media screen and (max-width: 767px) {
+      &{
+        @include text($size: 14px, $height: 14px);
+      }
+    }
+
+    @media screen and (max-width: 674px) {
+      &{
+        margin: 14px 0 60px 0;
+      }
+    }
   }
 
   &__logo{
     margin: 0 0 0 auto;
+
+    @media screen and (max-width: 674px) {
+      width: 280px;
+      height: 58px;
+    }
   }
 
   &__copyright{
     margin: 0 0 0 auto;
+    @include regularText;
+    @include text($size: 13px, $height: 13px);
+    letter-spacing: 1px;
+
+    @media screen and (max-width: 674px) {
+      &{
+        margin: 20px 0 0 12px;
+      }
+    }
   }
 
   @media screen and (min-width: 1442px) {
@@ -72,5 +118,14 @@
       border: solid $color;
       border-width: 1px 0 0;
     }
+  }
+
+  @media screen and (max-width: 674px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px;
+    box-sizing: border-box;
+    min-height: 429px;
   }
 }

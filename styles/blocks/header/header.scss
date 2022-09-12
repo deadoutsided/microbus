@@ -5,10 +5,17 @@
   background-color: $bg-color;
   width: 100%;
   max-width: 1440px;
+  max-height: 70px;
 
   @media screen and (min-width: 1442px) {
     border: solid $color;
     border-width: 0 1px 1px;
+  }
+
+  &__nav{
+    display: flex;
+    justify-content: center;
+    min-height: 70px;
   }
 
   &__list{
@@ -17,7 +24,8 @@
     margin: 0 0 0 50px;
     padding: 0;
     align-items: center;
-    @include text($family: $font-family, $weight: 400, $size: 12px, $height: 16px);
+    @include regularText();
+    @include text($size: 12px, $height: 16px);
     letter-spacing: 1px;
     text-transform: uppercase;
     color: $color;
@@ -39,7 +47,7 @@
 
     @media screen and (max-width: 767px) {
       &{
-        @include text($family: $font-family, $weight: 400, $size: 11px, $height: 16px);
+        @include text($size: 11px, $height: 16px);
         margin: 0 0 0 20px;
       }
       &_opened{
@@ -67,12 +75,13 @@
   }
 
   &__title{
-    margin: 16px 0 16px calc(50% - 92px - 251px);
+    position: absolute;
+    left: calc(50% - 92px);
+    margin: 16px 0 0;
 
     @media screen and (max-width: 1100px) {
       &{
         opacity: 1;
-        margin: 16px calc(50% - 92px - 60px) 16px auto;
         transition: opacity 0.5s linear;
       }
 
@@ -86,9 +95,8 @@
       &{
         height: 20px;
         width: 100px;
-        margin: 25px 0 25px 0;
-        position: relative;
-        left: calc(50% - 200px - 50px);
+        margin: 25px 0 0;
+        left: calc(50% - 50px);
       }
     }
   }
@@ -98,7 +106,7 @@
     background-color: inherit;
     border: none;
     justify-content: center;
-    margin: 25px 34px 25px 0px;
+    margin: 25px 34px 25px auto;
     padding: 0;
     display: none;
 
@@ -108,10 +116,7 @@
       }
 
       &_opened{
-
-        margin: auto 34px auto 0;
         width: 26px;
-        height: 26px;
 
         >.header__line{
           &:nth-child(2){
@@ -131,12 +136,11 @@
 
     @media screen and (max-width: 767px) {
       &{
-        margin: auto 20px auto auto;
+        margin: 25px 20px 25px auto;
       }
       &_opened{
         width: 20px;
         height: 20px;
-        margin: auto 20px auto auto;
       }
     }
   }

@@ -20,7 +20,8 @@
   }
 
   &__title{
-    @include text($family: $font-family, $weight: 400, $size: 46px, $height: 46px);
+    @include regularText();
+    @include text($size: 46px, $height: 46px);
     color: $color;
     max-width: 300px;
     padding: 0;
@@ -28,7 +29,7 @@
 
     @media screen and (max-width: 767px) {
       &{
-        @include text($family: $font-family, $size: 26px, $height: 26px, $weight: 400);
+        @include text($size: 26px, $height: 26px);
         margin: 0 calc(92vw - 68px - 106px) 0 0;
       }
     }
@@ -42,12 +43,12 @@
       &{
         max-width: 700px;
         padding: 34px calc(50% - 350px) 0;
+        max-height: 510px;
       }
     }
 
     @media screen and (max-width: 767px) {
       &{
-        max-width: 700px;
         min-width: 280px;
         padding: 0;
       }
