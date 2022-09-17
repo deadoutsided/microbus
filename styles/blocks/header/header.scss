@@ -118,6 +118,31 @@
     padding: 0;
     display: none;
 
+    &::before{
+      content: "";
+      width: 26px;
+      height: 2px;
+      background-image: url('../../../images/Line.svg');
+      margin: 0 0 7px;
+      transition: transform 0.3s linear;
+
+      @media screen and (max-width: 767px) {
+        width: 20px;
+      }
+    }
+
+    &::after{
+      content: "";
+      width: 26px;
+      height: 2px;
+      background-image: url('../../../images/Line.svg');
+      transition: transform 0.3s linear;
+
+      @media screen and (max-width: 767px) {
+        width: 20px;
+      }
+    }
+
     @media screen and (max-width: 1100px) {
       &{
         display: flex;
@@ -126,19 +151,27 @@
       &_opened{
         width: 26px;
 
-        >.header__line{
-          &:nth-child(2){
-            opacity: 0;
-          }
-          &:nth-child(1){
-            transform: rotate(45deg) translate(6px, 7px);
-            transition: transform 0.3s linear;
-          }
-          &:nth-child(3){
-            transform: rotate(-45deg) translate(6px, -7px);
-            transition: transform 0.3s linear;
+        &::before{
+          transform: rotate(45deg) translate(6px, 7px);
+          transition: transform 0.3s linear;
+
+          @media screen and (max-width: 767px) {
+            transform: rotate(45deg) translate(6px, 5px);
           }
         }
+
+        &::after{
+          transform: rotate(-45deg) translate(6px, -7px);
+          transition: transform 0.3s linear;
+
+          @media screen and (max-width: 767px) {
+            transform: rotate(-45deg) translate(7px, -6px);
+          }
+        }
+
+        >.header__line{
+          opacity: 0;
+          }
       }
     }
 
@@ -159,16 +192,8 @@
 
   &__line{
     margin: 0 0 7px;
-    transition: transform 0.3s linear;
-
-    &:nth-of-type(2){
       opacity: 1;
       transition: opacity 0.2s cubic-bezier(0.25, 1, 0.5, 1);
-    }
-
-    &:last-child{
-      margin: 0;
-    }
 
     @media screen and (max-width: 767px) {
       &{
