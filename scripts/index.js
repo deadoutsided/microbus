@@ -64,7 +64,6 @@ function openMenu(){
     headerList.setAttribute('class', menuClasses[0].list);
     headerMenu.setAttribute('class', menuClasses[0].menu);
   }
-  console.log('soso');
 }
 
 headerMenu.addEventListener('click', () => {openMenu()});

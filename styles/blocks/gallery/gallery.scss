@@ -63,7 +63,7 @@
     width: 42px;
     height: 34px;
     transition: opacity 0.3s linear;
-    background-image: url("../../../images/arrow_right.svg");
+    background-image: url("../images/arrow_right.svg");
     background-position: center;
 
     &:hover{
@@ -73,7 +73,7 @@
 
     &:first-child{
       margin: 0 30px 0 0;
-      background-image: url("../../../images/arrow_left.svg");
+      background-image: url("../images/arrow_left.svg");
 
       @media screen and (max-width: 767px) {
         margin: 0 16px 0 0;
