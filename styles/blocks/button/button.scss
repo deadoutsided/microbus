@@ -1,0 +1,64 @@
+.button{
+  text-decoration: none;
+  color: $color;
+  @include regularText;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: $bg-color;
+  border: 1px solid $color;
+  transition: color 0.3s linear;
+  transition: background-color 0.3s linear;
+
+  &:hover{
+    color:$bg-color;
+    background-color: $color;
+    transition: color 0.3s linear;
+    transition: background-color 0.3s linear;
+  }
+
+  &_place{
+    &_bus{
+      grid-column: 1/2;
+      grid-row: 4/5;
+      @include text($size: 15px, $height: 60px);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      box-sizing: border-box;
+      min-width: 360px;
+      justify-self: center;
+      height: min-content;
+      cursor: pointer;
+
+      @media screen and (max-width: 1340px) {
+        &{
+          grid-column: 1/2;
+          grid-row: 6/7;
+          margin: 100px 0 0;
+        }
+      }
+
+      @media screen and (max-width: 767px) {
+        &{
+          max-width: 360px;
+          min-width: 280px;
+          width: 100%;
+          margin: 60px 0 0;
+        }
+      }
+    }
+
+    &_press{
+      @include text($height: 28px, $size: 19px);
+      border-radius: 100%;
+      padding: 12px 26px;
+
+      @media screen and (max-width: 767px) {
+        &{
+          @include text($height: 28px, $size: 14px);
+          padding: 7px 22px;
+        }
+      }
+    }
+  }
+}

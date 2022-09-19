@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto-magazine</title>
+  <link rel="stylesheet" href="./pages/index.css">
+</head>
+<body class="page">
+  <header class="header">
+    <nav class="header__nav">
+      <ul class="header__list">
+        <li class="header__item"><a class="header__link" href="#">
+          Факты
+          </a>
+        </li>
+        <li class="header__item"><a class="header__link" href="#">
+          ГАЛЕРЕЯ
+          </a>
+        </li>
+        <li class="header__item"><a class="header__link" href="#">
+          ПРЕССА
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <img class="header__title" src="./images/AUTO-MAGAZINE.svg" alt="Авто-магазин">
+    <button class="header__menu-btn" type="button">
+      <img class="header__line" src="./images/Line.svg" alt="">
+    </button>
+  </header>
+  <main class="main">
+    <section class="bus">
+      <h1 class="bus__paragraph">volkswagen T1</h1>
+      <h2 class="bus__title">Новая версия популярного микроавтобуса</h2>
+      <p class="bus__paragraph">С ЭЛЕКТРО ДВИГАТЕЛЕМ</p>
+      <img class="bus__img" src="./images/bus.png" alt="Фото volkswagen T1">
+      <a href="#" class="button button_place_bus">Подробнее</a>
+    </section>
+    <section class="characteristics">
+      <p class="characteristics__paragraph">
+        <span class="characteristics__highlight">VW T1 Electro:</span> Отделение Volkswagen Commercial Vehicles представило концепт e-Bulli: классический вэн T1 1966 года
+        с электрической силовой установкой.
+        По словам производителя, проект получит коммерческое продолжение, и через фирму-партнера eClassics наборы для конверсии микроавтобусов в электрокары
+        и уже готовые машины будут продавать частным клиентам.
+      </p>
+      <div class="characteristics__column">
+        <h2 class="characteristics__title">ПЛЮСЫ</h2>
+        <ul class="characteristics__list characteristics__list_type_plus">
+          <li class="characteristics__item">Экологичный</li>
+          <li class="characteristics__item">Экономный</li>
+          <li class="characteristics__item">Тихий</li>
+        </ul>
+      </div>
+      <div class="characteristics__column">
+        <h2 class="characteristics__title">МИНУСЫ</h2>
+        <ul class="characteristics__list characteristics__list_type_minus">
+          <li class="characteristics__item">Дорогой</li>
+          <li class="characteristics__item">Подзарядка</li>
+        </ul>
+      </div>
+    </section>
+    <section class="gallery">
+      <img class="gallery__img" src="./images/gallery__img_bus.jpg" alt="volkswagen T1 едет по дороге">
+      <div class="gallery__container">
+        <h3 class="gallery__title">Галерея</h3>
+        <div class="gallery__btn-cont">
+          <button class="gallery__slider" type="button"></button>
+          <button class="gallery__slider" type="button"></button>
+        </div>
+      </div>
+    </section>
+    <section class="press">
+      <h3 class="press__title">Пресса</h3>
+      <div class="press__column">
+        <p class="press__paragraph"><span class="press__highlight">Engadget:</span> VW’s e-BULLI concept shows how your classic van can become an EV.</p>
+        <div class="press__cont">
+          <div class="press__radio-container">
+            <input class="press__radio" type="radio" id="first" name="press" checked disabled>
+            <label class="press__label" for="first">
+              <img class="press__circle" src="./images/unfilled_circle.svg" alt="">
+            </label>
+            <input class="press__radio" type="radio" id="second" name="press">
+            <label class="press__label" for="second">
+              <img class="press__circle" src="./images/unfilled_circle.svg" alt="">
+            </label>
+          </div>
+          <a class="button button_place_press" href="https://www.engadget.com/2020-03-20-vw-unveils-e-bulli-t1-electric-conversion.html" target="_blank">Читать</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__column">
+      <h3 class="footer__title">Подписка</h3>
+      <p class="footer__paragraph">На новые спецвыпуски машин.</p>
+      <form class="form" id="formData" name="subscriptionForm">
+        <input class="form__text-inp" type="text" placeholder="имя" name="name" required autocomplete="off">
+        <input class="form__text-inp" type="text" placeholder="фамилия" name="surname" required autocomplete="off">
+        <input class="form__text-inp form__text-inp_type_email" type="email" placeholder="почта" name="email" required autocomplete="off">
+        <button class="form__subm-btn" type="submit">подписка</button>
+      </form>
+    </div>
+    <div class="footer__column">
+      <img class="footer__logo" src="./images/AUTO-MAGAZINE.svg" alt="Авто-магазин">
+      <p class="footer__copyright">© Auto-Magazine 2021</p>
+    </div>
+  </footer>
+  <script src="./scripts/index.js"></script>
+</body>
+</html>

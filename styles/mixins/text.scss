@@ -1,0 +1,22 @@
+@mixin lightText(){
+  font: {
+    family: $font-family;
+    weight: 300;
+  }
+  font-style: normal;
+}
+
+@mixin regularText(){
+  font: {
+    family: $font-family;
+    weight: 400;
+  }
+  font-style: normal;
+}
+
+@mixin text($size, $height){
+  font: {
+    size: $size;
+  }
+  line-height: $height;
+}

@@ -1,0 +1,114 @@
+.gallery{
+  max-width: fit-content;
+  border: solid $color;
+  border-width: 0 1px 0 0;
+  max-width: 50%;
+  box-sizing: border-box;
+
+  &__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 50px;
+
+    @media screen and (max-width: 767px) {
+      &{
+        padding: 50px 0 0;
+        max-width: 700px;
+      }
+    }
+  }
+
+  &__title{
+    @include regularText();
+    @include text($size: 46px, $height: 46px);
+    color: $color;
+    max-width: 300px;
+    padding: 0;
+    margin: 0;
+
+    @media screen and (max-width: 767px) {
+      &{
+        @include text($size: 26px, $height: 26px);
+        margin: 0 calc(92vw - 68px - 106px) 0 0;
+      }
+    }
+  }
+
+  &__img{
+    object-fit: cover;
+    width: 100%;
+
+    @media screen and (max-width:1100px) {
+      &{
+        max-width: 700px;
+        padding: 34px calc(50% - 350px) 0;
+        max-height: 510px;
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      &{
+        min-width: 280px;
+        padding: 0;
+      }
+    }
+  }
+
+  &__slider{
+    border: none;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    width: 42px;
+    height: 34px;
+    transition: opacity 0.3s linear;
+    background-image: url("../images/arrow_right.svg");
+    background-position: center;
+
+    &:hover{
+      opacity: 0.6;
+      transition: opacity 0.3s linear;
+    }
+
+    &:first-child{
+      margin: 0 30px 0 0;
+      background-image: url("../images/arrow_left.svg");
+
+      @media screen and (max-width: 767px) {
+        margin: 0 16px 0 0;
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      width: 24px;
+      height: 20px;
+      background-size: 24px 20px;
+    }
+  }
+
+  &__btn-cont{
+
+    @media screen and (max-width: 767px) {
+      &{
+        min-width: 68px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1100px) {
+    &{
+      max-width: 100%;
+      border-width: 0;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    &{
+      padding: 20px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
