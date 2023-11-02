@@ -1,0 +1,83 @@
+.form{
+  margin: auto 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 340px;
+  box-sizing: border-box;
+  color: $color;
+
+  &__text-inp{
+    @include regularText();
+    @include text($size: 9px, $height: 18px);
+    color: inherit;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 170px;
+    height: 32px;
+    box-sizing: border-box;
+    padding: 7px 0 7px 11px;
+    border: solid $color;
+    border-width: 1px 1px 1px 0;
+    background-color: $bg-color;
+    cursor: pointer;
+
+    &:focus{
+      border: solid $color;
+      border-width: 1px 1px 1px 0;
+      outline: none;
+
+      &::placeholder{
+        color: transparent;
+      }
+    }
+
+    &_type{
+      &_email{
+        border: solid $color;
+        border-width: 0 0 1px 1px;
+        width: 260px;
+
+        &:focus{
+          border: solid $color;
+          border-width: 0 0 1px 1px;
+        }
+      }
+    }
+
+    &:first-child{
+      border: 1px solid $color;
+      &:focus{
+        border: 1px solid $color;
+        outline: none;
+      }
+    }
+
+    &::placeholder{
+      @include regularText();
+      @include text($size: 9px, $height: 18px);
+      color: $color;
+    }
+
+    @media screen and (max-width: 380px) {
+      &{
+        width: 140px;
+      }
+
+      &_type_email{
+        width: 200px;
+      }
+    }
+  }
+
+  &__subm-btn{
+    background-color: $color;
+    color: $bg-color;
+    @include regularText;
+    @include text($size:10px, $height: 13px);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 0;
+    width: 80px;
+    cursor: pointer;
+  }
+}
